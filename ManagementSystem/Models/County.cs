@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ManagementSystem.Models
 {
@@ -15,8 +10,6 @@ namespace ManagementSystem.Models
         [Required(ErrorMessage = "Name of County is required")]
         [StringLength(ManagementSystemConstants.MAX_COUNTY_NAME_LENGTH)]
         public string Name { get; set; }
-
-
 
     }
 }

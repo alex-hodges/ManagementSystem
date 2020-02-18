@@ -1,11 +1,14 @@
-﻿namespace ManagementSystem.Migrations
+﻿
+namespace ManagementSystem.Migrations
 {
+
     using ManagementSystem.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Linq;
+
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
@@ -21,15 +24,16 @@
 
         private void CreateCounties(ApplicationDbContext context)
         {
-            foreach (var County in SeedCounties)
+            foreach (var county in SeedCounties)
             {
-                var exist = context.Counties.FirstOrDefault(x => x.Name.Equals(County.Name, StringComparison.OrdinalIgnoreCase));
+                var exist = context.Counties.FirstOrDefault(x => x.Name.Equals(county.Name, StringComparison.OrdinalIgnoreCase));
 
                 if (exist == null)
                 {
-                    context.Counties.Add(County);
+                    context.Counties.Add(county);
                 }
             }
+            context.SaveChanges();
         }
 
         private static List<County> SeedCounties = new List<County> {
