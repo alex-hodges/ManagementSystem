@@ -4,24 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title - @Model.FriendlyName</h2>
 
 <div>
-    <h4>Contact</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.County.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.County.Name)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.FriendlyName)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.FriendlyName)
         </dd>
@@ -34,26 +24,25 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
+        @if (Model.DateOfBirth != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </dd>
+        }
         <dt>
             @Html.DisplayNameFor(model => model.PhonePrimary)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.PhonePrimary)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.FriendlyAddress)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.FriendlyAddress)
         </dd>

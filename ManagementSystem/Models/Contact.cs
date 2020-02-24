@@ -39,7 +39,7 @@ namespace ManagementSystem.Models
 
         [Display(Name = "Street Address Line 2")]
         [StringLength(ManagementSystemConstants.MAX_STREET_ADDRESS_LENGTH)]
-        public string StreetAdress2 { get; set; }
+        public string StreetAddress2 { get; set; }
 
         [Required(ErrorMessage = "City is required")]
         [StringLength(ManagementSystemConstants.MAX_CITY_LENGTH)]
@@ -65,9 +65,10 @@ namespace ManagementSystem.Models
         public string FriendlyName => $"{FirstName} {LastName}";
 
         [Display(Name = "Full Address")]
-        public string FriendlyAddress => string.IsNullOrWhiteSpace(StreetAdress2)
-            ? $"{StreetAddress1}, {City}, {County}, {Postcode}"
-            : $"{StreetAddress1} - {StreetAdress2}, {City}, {Postcode}";
+        public string FriendlyAddress => string.IsNullOrWhiteSpace(StreetAddress1) ? $"{City}, {County}, {Postcode}" :
+                                                string.IsNullOrWhiteSpace(StreetAddress2)
+                                                    ? $"{StreetAddress1}, {City}, {County}, {Postcode}"
+                                                    : $"{StreetAddress1} - {StreetAddress2}, {City}, {County}, {Postcode}";
     }
 
 
