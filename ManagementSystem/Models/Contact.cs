@@ -70,6 +70,4 @@ namespace ManagementSystem.Models
                                                     ? $"{StreetAddress1}, {City}, {County}, {Postcode}"
                                                     : $"{StreetAddress1} - {StreetAddress2}, {City}, {County}, {Postcode}";
     }
-
-
 }
