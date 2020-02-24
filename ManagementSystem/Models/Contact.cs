@@ -7,32 +7,37 @@ namespace ManagementSystem.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "First Name")]
         [Required(ErrorMessage = "First Name is required")]
         [StringLength(ManagementSystemConstants.MAX_FIRST_NAME_LENGTH)]
         public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
         [Required(ErrorMessage = "Last Name is required")]
         [StringLength(ManagementSystemConstants.MAX_LAST_NAME_LENGTH)]
         public string LastName { get; set; }
 
-
+        [Display(Name = "Email Address")]
         [Required(ErrorMessage = "Email Address is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         [StringLength(ManagementSystemConstants.MAX_EMAIL_LENGTH)]
         public string Email { get; set; }
 
-
+        [Display(Name = "Contact Number")]
         [Required(ErrorMessage = "Phone Number is required")]
         [Phone(ErrorMessage = "Invalid Phone Number")]
         [StringLength(ManagementSystemConstants.MAX_PHONE_LENGTH)]
         public string PhonePrimary { get; set; }
 
+        [Display(Name = "Date Of Birth")]
         [DataType(DataType.Date)]
-
         public DateTime DateOfBirth { get; set; }
 
+        [Display(Name = "Street Address Line 1")]
         [StringLength(ManagementSystemConstants.MAX_STREET_ADDRESS_LENGTH)]
         public string StreetAddress1 { get; set; }
 
+        [Display(Name = "Street Address Line 2")]
         [StringLength(ManagementSystemConstants.MAX_STREET_ADDRESS_LENGTH)]
         public string StreetAdress2 { get; set; }
 
@@ -40,6 +45,7 @@ namespace ManagementSystem.Models
         [StringLength(ManagementSystemConstants.MAX_CITY_LENGTH)]
         public string City { get; set; }
 
+        [Display(Name = "County")]
         [Required(ErrorMessage = "County is required")]
         public int CountyId { get; set; }
         public virtual County County { get; set; }
