@@ -30,7 +30,7 @@ namespace ManagementSystem
                       "~/Content/bootstrap.css",             
                       "~/Content/DataTables/datatables.min.css",
                       "~/Content/DataTables/jquery.datatables.min.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
         }
     }
 }

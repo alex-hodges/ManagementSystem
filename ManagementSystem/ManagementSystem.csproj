@@ -208,6 +208,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DataTables\datatables.min.css" />
     <Content Include="Content\DataTables\jquery.dataTables.min.css" />
+    <Content Include="Content\images\contact-scrabble.jpg" />
+    <Content Include="Content\images\telephones.jpg" />
+    <Content Include="Content\images\work.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
