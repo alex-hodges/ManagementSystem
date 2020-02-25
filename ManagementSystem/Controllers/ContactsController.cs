@@ -56,7 +56,7 @@ namespace ManagementSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Email,PhonePrimary,DateOfBirth,StreetAddress1,StreetAdress2,City,CountyId,Postcode,UserId")] Contact contact)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Email,PhonePrimary,DateOfBirth,StreetAddress1,StreetAddress2,City,CountyId,Postcode,UserId")] Contact contact)
         {
             _userId = GetCurrentUserId();
             contact.UserId = _userId;
@@ -97,7 +97,7 @@ namespace ManagementSystem.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Email,PhonePrimary,DateOfBirth,StreetAddress1,StreetAdress2,City,CountyId,Postcode")] Contact contact)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Email,PhonePrimary,DateOfBirth,StreetAddress1,StreetAddress2,City,CountyId,Postcode")] Contact contact)
         {
             _userId = GetCurrentUserId();
             var existing = db.Contacts.AsNoTracking().FirstOrDefault(x => x.Id == contact.Id && x.UserId == _userId);

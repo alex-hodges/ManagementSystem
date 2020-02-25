@@ -185,9 +185,9 @@
     <Compile Include="Migrations\202002171457004_Initial_Migration.designer.cs">
       <DependentUpon>202002171457004_Initial_Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002181026338_CreateContactAndCountyTables.cs" />
-    <Compile Include="Migrations\202002181026338_CreateContactAndCountyTables.designer.cs">
-      <DependentUpon>202002181026338_CreateContactAndCountyTables.cs</DependentUpon>
+    <Compile Include="Migrations\202002250852475_CreateContactAndCountyTables.cs" />
+    <Compile Include="Migrations\202002250852475_CreateContactAndCountyTables.designer.cs">
+      <DependentUpon>202002250852475_CreateContactAndCountyTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -390,8 +390,8 @@
     <EmbeddedResource Include="Migrations\202002171457004_Initial_Migration.resx">
       <DependentUpon>202002171457004_Initial_Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002181026338_CreateContactAndCountyTables.resx">
-      <DependentUpon>202002181026338_CreateContactAndCountyTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002250852475_CreateContactAndCountyTables.resx">
+      <DependentUpon>202002250852475_CreateContactAndCountyTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

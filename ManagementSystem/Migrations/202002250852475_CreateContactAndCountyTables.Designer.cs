@@ -13,7 +13,7 @@ namespace ManagementSystem.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202002181026338_CreateContactAndCountyTables"; }
+            get { return "202002250852475_CreateContactAndCountyTables"; }
         }
         
         string IMigrationMetadata.Source
